@@ -39,7 +39,7 @@ public class UserDaoImpl implements UserDao{
     public List<UserEntity> find(){
 		Sort sort = new Sort(new Order(Direction.DESC, "date")); 
         Query query = new Query();
-		query.with(sort).limit(1);
+		query.with(sort).limit(100);
         return mongoTemplate.find(query, UserEntity.class);
     }
 //	@Override
