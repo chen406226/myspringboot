@@ -39,7 +39,7 @@ public class SysDaoImpl implements SysDao{
 //		}else{
 //			update = new Update().set("msg", sys.getMsg());			
 //		}
-		if (sys.getMsg()!=""&&sys.getMsg()!=null) {
+		if (sys.getMsg()!=null) {
 			update = new Update().set("count", sys.getCount()).set("msg", sys.getMsg());
 		}else{
 			update = new Update().set("count", sys.getCount());

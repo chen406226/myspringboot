@@ -23,11 +23,11 @@ public class SysController {
 	@CrossOrigin
 	@RequestMapping("/sys/update")
 	public SysEntity sysupdate(String msg){
-		System.out.println(msg);
 		SysEntity sys = sysServer.findById(1);
 		sys.setCount(sys.getCount()+1);
+		System.out.println(msg!=null);
 		//无参进来null
-		if (msg!=""&&msg!=null) {
+		if (msg!=null) {
 			sys.setMsg(msg);
 		}
 		sysServer.updateSys(sys);
