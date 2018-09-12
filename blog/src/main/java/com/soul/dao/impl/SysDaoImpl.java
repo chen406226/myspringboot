@@ -32,14 +32,10 @@ public class SysDaoImpl implements SysDao{
 	public int updateSys(SysEntity sys) {
 		Query query = new Query(Criteria.where("id").is(sys.getId()));
 		Update update;
-//		if (sys.getMsg()!=null&&sys.getMsg()!=""&&sys.getCount()!=0&&sys.getCount()!=1) {
-//			update = new Update().set("count", sys.getCount()).set("msg", sys.getMsg());
-//		}else if (sys.getMsg()==null||sys.getMsg()=="") {
-//			update = new Update().set("count", sys.getCount());
-//		}else{
-//			update = new Update().set("msg", sys.getMsg());			
-//		}
-		if (sys.getMsg()!=null) {
+		System.out.println(sys.getScore());
+		if (sys.getScore()!=null) {
+			update = new Update().set("score", sys.getScore());
+		}else if (sys.getMsg()!=null) {
 			update = new Update().set("count", sys.getCount()).set("msg", sys.getMsg());
 		}else{
 			update = new Update().set("count", sys.getCount());

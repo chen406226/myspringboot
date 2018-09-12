@@ -22,13 +22,16 @@ public class SysController {
 	
 	@CrossOrigin
 	@RequestMapping("/sys/update")
-	public SysEntity sysupdate(String msg){
+	public SysEntity sysupdate(String msg,String score){
 		SysEntity sys = sysServer.findById(1);
-		sys.setCount(sys.getCount()+1);
-		System.out.println(msg!=null);
 		//无参进来null
-		if (msg!=null) {
-			sys.setMsg(msg);
+		if (score!=null) {
+			sys.setScore(score);
+		}else{
+			sys.setCount(sys.getCount()+1);			
+			if (msg!=null) {
+				sys.setMsg(msg);
+			}
 		}
 		sysServer.updateSys(sys);
 		return sys;

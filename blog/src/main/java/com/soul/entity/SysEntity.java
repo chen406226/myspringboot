@@ -7,9 +7,17 @@ public class SysEntity implements Serializable {
 	private int count;
 	private String msg;
 	private int id;
-	public SysEntity(int i, String msg) {
+	private String score;
+	public String getScore() {
+		return score;
+	}
+	public void setScore(String score) {
+		this.score = score;
+	}
+	public SysEntity(int i, String msg,String score) {
 		this.id = i;
 		this.count = i;
+		this.score = score;
 		this.msg = msg;
 	}
 	public SysEntity(){
@@ -40,6 +48,7 @@ public class SysEntity implements Serializable {
 				+ "id="+id
 				+ ",count="+count
 				+ ",msg="+msg
+				+ ",score="+score
 				+ "}";
 	}
 	
