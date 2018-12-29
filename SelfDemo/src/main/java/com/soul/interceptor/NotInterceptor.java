@@ -14,6 +14,9 @@ public class NotInterceptor {
 	static {
 		addNotInterceptor("/api/city");
 		addNotInterceptor("/login");
+		addNotInterceptor("/api/NoteList");
+		addNotInterceptor("/api/NoteWrite");
+		addNotInterceptor("/api/NoteWrites");
 	}
 	/*
 	 * 添加不用拦截的url

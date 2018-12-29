@@ -41,7 +41,12 @@ public class CityServiceImpl implements CityService{
 		return citys;
 //		return citymapper.findAllCity();
 	}
-	
+	public List findAllNote(){
+		return citymapper.findAllNote();
+	}
+	public Long addNote(String name,String content,String date){
+		return citymapper.addNote(name,content,date);
+	}
 	public City findCityById(Long id) {
 		//从缓存中获得城市信息
 		String key = "city_" + id;

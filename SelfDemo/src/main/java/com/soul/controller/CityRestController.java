@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.soul.domain.City;
 import com.soul.enums.EnumResponse;
 import com.soul.server.CityService;
-import com.soul.service.impl.CityServiceImpl;
 import com.soul.service.impl.MailServiceImpl;
 
 @RestController
@@ -33,6 +33,14 @@ public class CityRestController {
     	return baseResponse;
     }
 
+    @CrossOrigin
+    @RequestMapping("/api/NoteList")
+    public BaseResponse findAllNote() {
+    	Map<String,List> object = new HashMap<>();
+    	object.put("list", cityService.findAllNote());
+    	BaseResponse baseResponse = new BaseResponse(true,EnumResponse.SUCCESS.getMsg(),object);
+        return baseResponse;
+    }
     @RequestMapping(value = "/api/city", method = RequestMethod.GET)
     public BaseResponse findAllCity() {
     	Map<String,List<City>> object = new HashMap<>();
@@ -50,6 +58,9 @@ public class CityRestController {
         cityService.saveCity(city);
     }
 
+
+    
+    
     @RequestMapping(value = "/api/city", method = RequestMethod.PUT)
     public Long modifyCity(@RequestBody City city) {
         return cityService.updateCity(city);
@@ -70,5 +81,10 @@ public class CityRestController {
     @RequestMapping("/sendemailfile")
     public void sendAttachmentsMail() {
     	mailservicelmpl.sendAttachmentsMail("1319785768@qq.com","测试标题","测试内容","/home/chenkun/studus/javastudus/vhr/README.md");
+    }
+    @CrossOrigin
+    @RequestMapping("/api/NoteWrite")
+    public Long addNote(String name,String content,String data){
+    	return cityService.addNote(name,content,data);
     }
 }

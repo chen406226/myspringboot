@@ -57,4 +57,27 @@
 		where
 			id = #{id}
 	</delete>
+	
+	<resultMap id="ElMap" type="hashmap">
+		<result column="u_id" property="id" />
+		<result column="data" property="date" />
+		<result column="content" property="content" />
+		<result column="name" property="name" />
+	</resultMap>
+	
+	<select id="findAllNote" resultMap="ElMap">
+		select writes.id, content, u_id, data, user.id, name from writes left outer join user on user.id=writes.u_id
+	</select>
+	
+	<select id="findAllNotes" resultType="hashmap">
+		select id, content, u_id, data, name from writes left outer join user on user.id=writes.u_id
+	</select>
+	
+	
+	<insert id="addNote" useGeneratedKeys="true">
+		insert into 
+			writes(content,u_id,data)
+		values
+			(#{content},(select id from user where name=#{name}),#{date})
+	</insert>
 </mapper>
