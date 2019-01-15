@@ -42,9 +42,9 @@ public class HelloWorldController {
     	return result;
     }
     @CrossOrigin
-    @RequestMapping("/gethello/{id}")
-    public String getHello(@PathVariable("id") String id) {
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("https://passport.baidu.com/v2/?regphonecheck&token=2fb6aa71e1c6faf298a8fa329ebb67bb&tpl=mn&apiver=v3&tt=1547547659209&phone="+id+"&moonshad=7ade06dodb539f4a920505cb102a5c04de&countrycode=&gid=ED9BBDD-2186-43F2-ACE3-4E287F815AC9&exchange=0&isexchangeable=1&action=reg&traceid=&callback=bd__cbs__tvnxp9", String.class);
+    @RequestMapping("/gethello/{id}/{hs}/{mt}")
+    public String getHello(@PathVariable("id") String id,@PathVariable("hs") String hs,@PathVariable("mt") String mt) {
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("https://passport.baidu.com/v2/?regphonecheck&token=80c2df40a87228bbae106d8bb5dd3bb8&tpl=mn&apiver=v3&tt=1547561009043&phone="+id+"&moonshad="+hs+"&countrycode=&gid="+mt+"&exchange=0&isexchangeable=1&action=reg&traceid=&callback=bd__cbs__vop928", String.class);
         String body = responseEntity.getBody();
         HttpStatus statusCode = responseEntity.getStatusCode();
         int statusCodeValue = responseEntity.getStatusCodeValue();
