@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var p = 13814400063;
+    var i = 1;
+    const m = setInterval(()=>{
+      tofetch(p+i*100)
+      i++
+      if (i==999) {
+        clearInterval(m);
+      }
+    },200)
+
+
+    function tofetch(mh){
+      fetch('http://localhost:9999/gethello/'+mh,{
+        method:'GET'
+      }).then((res)=>{
+        return res.text()
+      }).then(res=>{
+        console.log(res)
+        if (res.indexOf("40001")>0) {
+          // return res
+          console.log("****************"+res)
+        }
+      })
+    }  
+
+    tofetch()
+  </script>
+</body>
+</html>
