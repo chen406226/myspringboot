@@ -14,7 +14,7 @@ public class SysServer {
 	public SysEntity findById(int id){
 		SysEntity sys = sysDao.findById(id);
 		if (sys==null) {
-			SysEntity sy = new SysEntity(1,"");
+			SysEntity sy = new SysEntity(1,"","无记录");
 			saveSys(sy);
 			return sy;
 		}
