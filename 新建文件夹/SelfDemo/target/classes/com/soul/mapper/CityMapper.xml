@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.soul.mapper.CityMapper">
+	<resultMap id="BaseResultMap" type="com.soul.domain.City">
+		<result column="id" property="id" />
+		<result column="province_id" property="provinceId" />
+		<result column="city_name" property="cityName" />
+		<result column="description" property="description" />
+	</resultMap>
+
+	<parameterMap id="City" type="com.soul.domain.City"/>
+
+	<sql id="Base_Column_List">
+		id, province_id, city_name, description
+	</sql>
+
+	<select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from city
+		where id = #{id}
+	</select>
+
+	<select id="findAllCity" resultMap="BaseResultMap" >
+		select
+		<include refid="Base_Column_List" />
+		from city
+	</select>
+
+	<insert id="saveCity" parameterMap="City" useGeneratedKeys="true" keyProperty="id">
+		insert into
+			city(id,province_id,city_name,description)
+		values
+			(#{id},#{provinceId},#{cityName},#{description})
+	</insert>
+
+	<update id="updateCity" parameterMap="City">
+		update
+			city
+		set
+		<if test="provinceId!=null">
+			province_id = #{provinceId},
+		</if>
+		<if test="cityName!=null">
+			city_name = #{cityName},
+		</if>
+		<if test="description!=null">
+			description = #{description}
+		</if>
+		where
+			id = #{id}
+	</update>
+
+	<delete id="deleteCity" parameterType="java.lang.Long">
+		delete from
+			city
+		where
+			id = #{id}
+	</delete>
+	
+	<resultMap id="ElMap" type="hashmap">
+		<result column="u_id" property="id" />
+		<result column="data" property="date" />
+		<result column="content" property="content" />
+		<result column="name" property="name" />
+	</resultMap>
+	
+	<select id="findAllNote" resultMap="ElMap">
+		select writes.id, content, u_id, data, user.id, name from writes left outer join user on user.id=writes.u_id
+	</select>
+	
+	<select id="findAllNotes" resultType="hashmap">
+		select id, content, u_id, data, name from writes left outer join user on user.id=writes.u_id
+	</select>
+	
+	
+	<insert id="addNote" useGeneratedKeys="true">
+		insert into 
+			writes(content,u_id,data)
+		values
+			(#{content},(select id from user where name=#{name}),#{date})
+	</insert>
+</mapper>

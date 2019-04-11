@@ -1,0 +1,34 @@
+24/Spring与！Quartz整合方案
+	1.使用org.springframework.scheduling.quartz.jobDetailBean+jobDataAsMap
+	2.使用org.springframework.scheduling.quartz.jobDetailBean+schedulerContextAsMap
+	3.org.springframework.scheduling.quartz.MethodlnvokingJobDetailFactoryBean这个可以让任何定义再spring中的类恒伟Quartz要求的job
+	4.org.springframework.scheduling.quartz.SchedulerFactoryBean+applicationContextSchedulerContextKey
+	本项目用的是org.springframework.scheduling.quartz.SchedulerFactoryBean+AutowireCapableBeanFactory
+	用蕲艾比较灵活不见得是最优的
+编码思路说明  源于Quartz直接再java中编码的方式
+1.SchedulerFactory:调度工厂类，用于生产调度类，再和Spring集成的话使用org.springframework.scheduling.quartz.SchedulerFactoryBean
+2.Scheduler:任务调度类用于调度具体的job再和Spring集成的话使用schedulerFactoryBean.getScheduler()获取
+3.job：具体任务实现类，定义一个job这个具体执行任务的类
+4.jobDetail:定义任务信息，比如分组，job名称等
+5.trigger:定义任务的触发器
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
