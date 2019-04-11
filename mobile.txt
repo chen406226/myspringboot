@@ -1,3 +1,8 @@
+"400001", msg: "已被其他帐号绑定"
+400003", msg: "手机号已被注册，请直接登录或更换手机号注册 
+400005  "已被其他帐号绑定"
+
+
 13814400163errInfo":{        "no": "400003",       
 baidu.html:166 13814400263errInfo":{        "no": "0",        "msg
 baidu.html:166 13814400363errInfo":{        "no": "400003",       
@@ -48,23 +53,23 @@ baidu.html:166 13814404763errInfo":{        "no": "0",        "msg
 baidu.html:166 13814404863errInfo":{        "no": "400003",       
 baidu.html:166 13814404963errInfo":{        "no": "0",        "msg
 baidu.html:166 13814405063errInfo":{        "no": "0",        "msg
-baidu.html:166 13814405163errInfo":{        "no": "400001",       
+baidu.html:166 13814405163errInfo":{        "no": "400001"#######,       
 baidu.html:166 13814405263errInfo":{        "no": "400003",       
 baidu.html:166 13814405363errInfo":{        "no": "0",        "msg
 baidu.html:166 13814405463errInfo":{        "no": "0",        "msg
 baidu.html:166 13814405563errInfo":{        "no": "400003",       
 baidu.html:166 13814405663errInfo":{        "no": "400003",       
-baidu.html:166 13814405763errInfo":{        "no": "400001",       
+baidu.html:166 13814405763errInfo":{        "no": "400001"######,       
 baidu.html:166 13814405863errInfo":{        "no": "0",        "msg
 baidu.html:166 13814405963errInfo":{        "no": "0",        "msg
 baidu.html:166 13814406063errInfo":{        "no": "400003",       
 baidu.html:166 13814406163errInfo":{        "no": "0",        "msg
-baidu.html:166 13814406263errInfo":{        "no": "400005",       
+baidu.html:166 13814406263errInfo":{        "no": "400005"#######,       
 baidu.html:166 13814406363errInfo":{        "no": "0",        "msg
 baidu.html:166 13814406463errInfo":{        "no": "0",        "msg
 baidu.html:166 13814406563errInfo":{        "no": "0",        "msg
-baidu.html:166 13814406663errInfo":{        "no": "400001",       
-baidu.html:166 13814406763errInfo":{        "no": "400001",       
+baidu.html:166 13814406663errInfo":{        "no": "400001"######,       
+baidu.html:166 13814406763errInfo":{        "no": "400001"#######,       
 baidu.html:166 13814406863errInfo":{        "no": "400003",       
 baidu.html:166 13814406963errInfo":{        "no": "130017", 
 13814406963errInfo":{        "no": "0",        "msg
@@ -73,7 +78,7 @@ baidu.html:166 13814407163errInfo":{        "no": "0",        "msg
 baidu.html:166 13814407263errInfo":{        "no": "0",        "msg
 baidu.html:166 13814407363errInfo":{        "no": "0",        "msg
 baidu.html:166 13814407463errInfo":{        "no": "0",        "msg
-baidu.html:166 13814407563errInfo":{        "no": "400001",       
+baidu.html:166 13814407563errInfo":{        "no": "400001"######,       
 baidu.html:166 13814407663errInfo":{        "no": "0",        "msg
 baidu.html:166 13814407763errInfo":{        "no": "0",        "msg
 baidu.html:166 13814407863errInfo":{        "no": "0",        "msg
@@ -101,11 +106,11 @@ baidu.html:166 13814409963errInfo":{        "no": "400003",
 baidu.html:166 13814410063errInfo":{        "no": "0",        "msg
 baidu.html:166 13814410163errInfo":{        "no": "400003",       
 baidu.html:166 13814410263errInfo":{        "no": "0",        "msg
-baidu.html:166 13814410363errInfo":{        "no": "400005",       
+baidu.html:166 13814410363errInfo":{        "no": "400005"######,       
 baidu.html:166 13814410463errInfo":{        "no": "0",        "msg
 baidu.html:166 13814410563errInfo":{        "no": "0",        "msg
 baidu.html:166 13814410663errInfo":{        "no": "0",        "msg
-baidu.html:166 13814410763errInfo":{        "no": "130017",
+baidu.html:166 13814410763errInfo":{        "no": "130017" #####,
 13814410863errInfo":{        "no": "400001",       
 baidu.html:166 13814410963errInfo":{        "no": "0",        "msg
 baidu.html:166 13814411063errInfo":{        "no": "0",        "msg
@@ -116,22 +121,22 @@ baidu.html:166 13814411463errInfo":{        "no": "0",        "msg
 baidu.html:166 13814411563errInfo":{        "no": "400003",       
 baidu.html:166 13814411663errInfo":{        "no": "0",        "msg
 baidu.html:166 13814411763errInfo":{        "no": "0",        "msg
-baidu.html:166 13814411863errInfo":{        "no": "400001",       
+baidu.html:166 13814411863errInfo":{        "no": "400001"##########,       
 baidu.html:166 13814411963errInfo":{        "no": "400003",       
 baidu.html:166 13814412063errInfo":{        "no": "0",        "msg
-baidu.html:166 13814412163errInfo":{        "no": "400001",       
+baidu.html:166 13814412163errInfo":{        "no": "400001"#########,       
 baidu.html:166 13814412263errInfo":{        "no": "0",        "msg
 baidu.html:166 13814412363errInfo":{        "no": "0",        "msg
 baidu.html:166 13814412463errInfo":{        "no": "0",        "msg
 baidu.html:166 13814412563errInfo":{        "no": "0",        "msg
 baidu.html:166 13814412663errInfo":{        "no": "0",        "msg
 baidu.html:166 13814412763errInfo":{        "no": "0",        "msg
-baidu.html:166 13814412863errInfo":{        "no": "130017",       
+baidu.html:166 13814412863errInfo":{        "no": "130017" 对对对对对对对,       
 baidu.html:166 13814412963errInfo":{        "no": "0",        "msg
 baidu.html:166 13814413063errInfo":{        "no": "0",        "msg
 baidu.html:166 13814413163errInfo":{        "no": "0",        "msg
 baidu.html:166 13814413263errInfo":{        "no": "0",        "msg
-baidu.html:166 13814413363errInfo":{        "no": "400001",       
+baidu.html:166 13814413363errInfo":{        "no": "400001"#########,       
 baidu.html:166 13814413463errInfo":{        "no": "0",        "msg
 baidu.html:166 13814413563errInfo":{        "no": "0",        "msg
 baidu.html:166 13814413663errInfo":{        "no": "0",        "msg
@@ -146,3 +151,194 @@ baidu.html:166 13814414463errInfo":{        "no": "400003",
 baidu.html:166 13814414563errInfo":{        "no": "400003",       
 baidu.html:166 13814414663errInfo":{        "no": "0",        "msg
 baidu.html:166 13814414763errInfo":{        "no": "0",        "msg
+13814414763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814414863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814414963errInfo":{        "no": "400005"######,       
+baidu.html:171 13814415063errInfo":{        "no": "400001"########,       
+baidu.html:171 13814415163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814415263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814415363errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814415463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814415563errInfo":{        "no": "400003",       
+baidu.html:171 13814415663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814415763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814415863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814415963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814416063errInfo":{        "no": "400003",       
+baidu.html:171 13814416163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814416263errInfo":{        "no": "400003",       
+baidu.html:171 13814416363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814416463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814416563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814416663errInfo":{        "no": "400005"#######,       
+baidu.html:171 13814416763errInfo":{        "no": "400003",       
+baidu.html:171 13814416863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814416963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814417063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814417163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814417263errInfo":{        "no": "400005"###########,       
+baidu.html:171 13814417363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814417463errInfo":{        "no": "400001"##########,       
+baidu.html:171 13814417563errInfo":{        "no": "400003",       
+baidu.html:171 13814417663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814417763errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814417863errInfo":{        "no": "400001"#########,       
+baidu.html:171 13814417963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418163errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814418263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814418963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814419063errInfo":{        "no": "400003",       
+baidu.html:171 13814419163errInfo":{        "no": "400001"######,       
+baidu.html:171 13814419263errInfo":{        "no": "400005"##########,       
+baidu.html:171 13814419363errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814419463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814419563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814419663errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814419763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814419863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814419963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814420063errInfo":{        "no": "400003",       
+baidu.html:171 13814420163errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814420263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814420363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814420463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814420563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814420663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814420763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814420863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814420963errInfo":{        "no": "400001"########,       
+baidu.html:171 13814421063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814421163errInfo":{        "no": "400001"########,       
+baidu.html:171 13814421263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814421363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814421463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814421563errInfo":{        "no": "400003",       
+baidu.html:171 13814421663errInfo":{        "no": "400001"######,       
+baidu.html:171 13814421763errInfo":{        "no": "400003",       
+baidu.html:171 13814421863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814421963errInfo":{        "no": "400003",       
+baidu.html:171 13814422063errInfo":{        "no": "400003",       
+baidu.html:171 13814422163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814422263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814422363errInfo":{        "no": "400001"####,  
+13814422463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814422563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814422663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814422763errInfo":{        "no": "400005"########,       
+baidu.html:171 13814422863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814422963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814423063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814423163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814423263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814423363errInfo":{        "no": "400003",       
+baidu.html:171 13814423463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814423563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814423663errInfo":{        "no": "400001"####,       
+baidu.html:171 13814423763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814423863errInfo":{        "no": "400003",       
+baidu.html:171 13814423963errInfo":{        "no": "400003",       
+baidu.html:171 13814424063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814424163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814424263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814424363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814424463errInfo":{        "no": "130017"######,       
+baidu.html:171 13814424563errInfo":{        "no": "400005"#####,       
+baidu.html:171 13814424663errInfo":{        "no": "400003",       
+baidu.html:171 13814424763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814424863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814424963errInfo":{        "no": "400003",       
+baidu.html:171 13814425063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814425163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814425263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814425363errInfo":{        "no": "400001"########,       
+baidu.html:171 13814425463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814425563errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814425663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814425763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814425863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814425963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814426063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814426163errInfo":{        "no": "0",        "msg
+13814426263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814426363errInfo":{        "no": "400005"######nopass####,       
+baidu.html:171 13814426463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814426563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814426663errInfo":{        "no": "400005"#######,       
+baidu.html:171 13814426763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814426863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814426963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814427063errInfo":{        "no": "400003",       
+baidu.html:171 13814427163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814427263errInfo":{        "no": "400001"######,       
+baidu.html:171 13814427363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814427463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814427563errInfo":{        "no": "400005",       
+baidu.html:171 13814427663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814427763errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814427863errInfo":{        "no": "400001"########,       
+baidu.html:171 13814427963errInfo":{        "no": "400003",       
+baidu.html:171 13814428063errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814428163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814428263errInfo":{        "no": "400001"######,       
+baidu.html:171 13814428363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814428463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814428563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814428663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814428763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814428863errInfo":{        "no": "0",        "msg
+baidu.html:171 13814428963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814429063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814429163errInfo":{        "no": "400003",       
+baidu.html:171 13814429263errInfo":{        "no": "400003",       
+baidu.html:171 13814429363errInfo":{        "no": "400001"#####,       
+baidu.html:171 13814429463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814429563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814429663errInfo":{        "no": "400003",       
+baidu.html:171 13814429763errInfo":{        "no": "400003",     
+baidu.html:171 13814429863errInfo":{        "no": "400003",       
+baidu.html:171 13814429963errInfo":{        "no": "400001"########,       
+baidu.html:171 13814430063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814430163errInfo":{        "no": "400003",       
+baidu.html:171 13814430263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814430363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814430463errInfo":{        "no": "400003",       
+baidu.html:171 13814430563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814430663errInfo":{        "no": "400003",       
+baidu.html:171 13814430763errInfo":{        "no": "400001"######,       
+baidu.html:171 13814430863errInfo":{        "no": "400005"######,       
+baidu.html:171 13814430963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814431063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814431163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814431263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814431363errInfo":{        "no": "400003",       
+baidu.html:171 13814431463errInfo":{        "no": "400001"#######,       
+baidu.html:171 13814431563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814431663errInfo":{        "no": "400003",       
+baidu.html:171 13814431763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814431863errInfo":{        "no": "400001"######,       
+baidu.html:171 13814431963errInfo":{        "no": "400003",       
+baidu.html:171 13814432063errInfo":{        "no": "400003",       
+baidu.html:171 13814432163errInfo":{        "no": "0",        "msg
+baidu.html:171 13814432263errInfo":{        "no": "400003",       
+baidu.html:171 13814432363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814432463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814432563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814432663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814432763errInfo":{        "no": "0",        "msg
+baidu.html:171 13814432863errInfo":{        "no": "400003",       
+baidu.html:171 13814432963errInfo":{        "no": "0",        "msg
+baidu.html:171 13814433063errInfo":{        "no": "0",        "msg
+baidu.html:171 13814433163errInfo":{        "no": "400003",       
+baidu.html:171 13814433263errInfo":{        "no": "0",        "msg
+baidu.html:171 13814433363errInfo":{        "no": "0",        "msg
+baidu.html:171 13814433463errInfo":{        "no": "0",        "msg
+baidu.html:171 13814433563errInfo":{        "no": "0",        "msg
+baidu.html:171 13814433663errInfo":{        "no": "0",        "msg
+baidu.html:171 13814433763errInfo":{        "no": "130017",   
