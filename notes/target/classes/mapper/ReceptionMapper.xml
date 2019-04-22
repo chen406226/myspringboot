@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.note.mapper.ReceptionMapper">
+    <resultMap id="BaseResultMap" type="com.note.schema.Reception">
+        <result column="id" property="id" />
+        <result column="book_id" property="bookId" />
+        <result column="email" property="email" />
+    </resultMap>
+
+    <parameterMap id="Reception" type="com.note.schema.Reception"/>
+
+    <sql id="Base_Column_List">
+        id, book_id,email
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from reception
+        where id = #{id}
+    </select>
+
+    <!--<select id="findByBookId" resultMap="BaseResultMap" parameterType="java.lang.Long">-->
+        <!--select-->
+          <!--reception.id as id,reception.book_id as book_id,reception.email as email-->
+        <!--from reception left join book on reception.book_id = book.id-->
+        <!--where id = #{bookid}-->
+    <!--</select>-->
+    <select id="findByBookId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List" />
+        from reception
+        where book_id = #{bookId}
+    </select>
+    <select id="findAll" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from reception
+    </select>
+
+    <insert id="saveReception" parameterMap="Reception" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        book(book_id,email)
+        values
+        (#{bookId},#{email})
+    </insert>
+
+    <update id="update" parameterMap="Reception">
+        update
+        book
+        set
+        <if test="email!=null">
+            email = #{email},
+        </if>
+        <if test="bookId!=null">
+            book_id = #{bookId},
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteCity" parameterType="java.lang.Long">
+        delete from
+        reception
+        where
+        id = #{id}
+    </delete>
+</mapper>
