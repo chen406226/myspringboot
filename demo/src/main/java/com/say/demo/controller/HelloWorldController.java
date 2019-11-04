@@ -41,6 +41,20 @@ public class HelloWorldController {
         System.out.println(result);
     	return result;
     }
+    @RequestMapping("/xinlang")
+    public String xinl() throws IOException {
+    	long time = System.currentTimeMillis();
+    	String url = "https://hq.sinajs.cn/etag.php?_="+time+"&list=btc_btcbtcusd";
+    	System.out.println(url);
+        //post请求
+        HttpMethod method =HttpMethod.GET;
+        // 封装参数，千万不要替换为Map与HashMap，否则参数无法传递
+        MultiValueMap<String, String> params= new LinkedMultiValueMap<String, String>();
+        //发送http请求并返回结果
+        String result = HttpUtil.HttpRestClient(url,method,params);
+        System.out.println(result);
+    	return result;
+    }
     @CrossOrigin
     @RequestMapping("/gethello/{id}/{hs}/{mt}")
     public String getHello(@PathVariable("id") String id,@PathVariable("hs") String hs,@PathVariable("mt") String mt) {
