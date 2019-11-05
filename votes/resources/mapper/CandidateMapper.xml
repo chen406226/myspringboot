@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.votes.mapper.CandidateMapper">
+    <resultMap id="BaseResultMap" type="com.votes.schema.Candidates">
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="info" property="info" />
+        <result column="countmoney" property="countmoney" />
+    </resultMap>
+
+    <parameterMap id="Candidates" type="com.votes.schema.Candidates"/>
+
+    <sql id="Base_Column_List">
+        id, name,info
+    </sql>
+
+
+    <select id="findCandidates" resultMap="BaseResultMap" >
+    select can.id,can.name,can.info,sum(votes.money) as countmoney from candidates can left join votes on votes.candidates_id = can.id group by can.id
+    </select>
+<select id="findCand" resultMap="BaseResultMap" >
+        <include refid="Base_Column_List" />
+        from candidates
+    </select>
+	<select id="findCandidatesByCode" resultType="HashMap" >
+        select count(id) as count
+        from votes where code = #{code}
+    </select>
+
+    <insert id="saveReception" parameterMap="Candidates" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        candidates(name,info)
+        values
+        (#{name},#{info})
+    </insert>
+
+
+<resultMap id="VoteResultMap" type="com.votes.schema.Votes">
+        <result column="id" property="id" />
+        <result column="candidates_id" property="candidatesId" />
+        <result column="code" property="code" />
+        <result column="money" property="money" />
+    </resultMap>
+    <insert id="AddVotes" useGeneratedKeys="true">
+        insert into votes(money,code,candidates_id) values(#{money},#{code},#{candidatesId})
+    </insert>
+    
+    
+
+</mapper>

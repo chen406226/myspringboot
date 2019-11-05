@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.note.mapper.BookMapper">
+    <resultMap id="BaseResultMap" type="com.note.schema.Book">
+        <result column="uname" property="uname" />
+        <result column="id" property="id" />
+        <result column="btype" property="btype" />
+        <result column="url" property="url" />
+        <result column="book" property="book" />
+        <result column="checkkey" property="checkkey" />
+    </resultMap>
+
+    <parameterMap id="Book" type="com.note.schema.Book"/>
+
+    <sql id="Base_Column_List">
+        id, btype, url, uname,book,checkkey
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from book
+        where id = #{id}
+    </select>
+
+    <select id="findAll" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from book
+    </select>
+
+    <insert id="saveBook" parameterMap="Book" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        book(btype,url,book,uname,checkkey)
+        values
+        (#{btype},#{url},#{book},#{uname},#{checkkey})
+    </insert>
+
+    <update id="updateBook" parameterMap="Book">
+        update
+        book
+        set
+        <if test="checkkey!=null">
+            checkkey = #{checkkey}
+        </if>
+        <!--<if test="cityName!=null">-->
+            <!--city_name = #{cityName},-->
+        <!--</if>-->
+        <if test="book!=null">
+            book = #{book}
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteCity" parameterType="java.lang.Long">
+        delete from
+        book
+        where
+        id = #{id}
+    </delete>
+</mapper>
