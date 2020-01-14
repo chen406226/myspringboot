@@ -8,6 +8,12 @@
         <result column="countmoney" property="countmoney" />
     </resultMap>
 
+	<resultMap id="ProductResultMap" type="com.votes.schema.Product">
+        <result column="id" property="id" />
+        <result column="status" property="status" />
+        <result column="name" property="name" />
+    </resultMap>
+
     <parameterMap id="Candidates" type="com.votes.schema.Candidates"/>
 
     <sql id="Base_Column_List">
@@ -16,16 +22,23 @@
 
 
     <select id="findCandidates" resultMap="BaseResultMap" >
-    select can.id,can.name,can.info,sum(votes.money) as countmoney from candidates can left join votes on votes.candidates_id = can.id group by can.id
+    select can.id,can.name,can.info,sum(votes.money) as countmoney from candidates can left join votes on votes.candidates_id = can.id where can.product_id = #{productId} group by can.id
     </select>
 <select id="findCand" resultMap="BaseResultMap" >
         <include refid="Base_Column_List" />
         from candidates
     </select>
 	<select id="findCandidatesByCode" resultType="HashMap" >
-        select count(id) as count
-        from votes where code = #{code}
+        select count(id) as count from votes where code = #{code} and product_id = #{productId}
     </select>
+    
+    
+    <select id="findProductAll" resultMap="ProductResultMap">
+        select * from product where status = 1
+    </select>
+
+	
+
 
     <insert id="saveReception" parameterMap="Candidates" useGeneratedKeys="true" keyProperty="id">
         insert into
@@ -35,16 +48,34 @@
     </insert>
 
 
-<resultMap id="VoteResultMap" type="com.votes.schema.Votes">
+	<resultMap id="VoteResultMap" type="com.votes.schema.Votes">
         <result column="id" property="id" />
         <result column="candidates_id" property="candidatesId" />
         <result column="code" property="code" />
         <result column="money" property="money" />
+        <result column="name" property="name" />
     </resultMap>
+    
+    <resultMap id="VoteResultMapl" type="com.votes.schema.Votes">
+        <result column="id" property="id" />
+        <result column="money" property="money" />
+        <result column="name" property="name" />
+    </resultMap>
+    
+    <select id="findVoteDetail" resultType="HashMap" >
+        select id,name,money from votes where product_id = #{productId} and candidates_id=#{candidateId} order by money desc
+    </select>
+    
     <insert id="AddVotes" useGeneratedKeys="true">
-        insert into votes(money,code,candidates_id) values(#{money},#{code},#{candidatesId})
+        insert into votes(money,code,name,candidates_id,product_id) values(#{money},#{code},#{name},#{candidatesId},#{productId})
     </insert>
     
-    
-
+	    
+	<select id="findObjByProperty" resultType="HashMap" >
+        SELECT bid FROM rd_qh_buy_borrow
+        <where>
+        	<if test="isBig!=null">is_big = #{isBig}</if>
+        	<if test="symbol!=null">and symbol = #{symbol}</if>        	
+        </where>
+    </select>
 </mapper>

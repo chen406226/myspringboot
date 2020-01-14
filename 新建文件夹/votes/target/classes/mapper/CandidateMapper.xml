@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.votes.mapper.CandidateMapper">
+    <resultMap id="BaseResultMap" type="com.votes.schema.Candidates">
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="info" property="info" />
+        <result column="countmoney" property="countmoney" />
+    </resultMap>
+
+	<resultMap id="ProductResultMap" type="com.votes.schema.Product">
+        <result column="id" property="id" />
+        <result column="status" property="status" />
+        <result column="name" property="name" />
+    </resultMap>
+
+    <parameterMap id="Candidates" type="com.votes.schema.Candidates"/>
+
+    <sql id="Base_Column_List">
+        id, name,info
+    </sql>
+
+
+    <select id="findCandidates" resultMap="BaseResultMap" >
+    select can.id,can.name,can.info,sum(votes.money) as countmoney from candidates can left join votes on votes.candidates_id = can.id where can.product_id = #{productId} group by can.id  ORDER BY countmoney DESC
+    </select>
+<select id="findCand" resultMap="BaseResultMap" >
+        <include refid="Base_Column_List" />
+        from candidates
+    </select>
+	<select id="findCandidatesByCode" resultType="HashMap" >
+        select count(id) as count from votes where code = #{code} and product_id = #{productId}
+    </select>
+    
+    
+    <select id="findProductAll" resultMap="ProductResultMap">
+        select * from product where status = 1
+    </select>
+    
+    <select id="findTwitterAll" resultType="HashMap" >
+        select * from twitter ORDER BY id DESC
+    </select>
+    
+<resultMap id="BaseResultMapp" type="com.votes.schema.Product">
+        <result column="id" property="id" />
+        <result column="status" property="status" />
+        <result column="name" property="name" />
+</resultMap>
+ 
+ 
+<resultMap id="recordCounts" type="java.lang.Long">
+  <result column="recordCounts" jdbcType="BIGINT"/>
+</resultMap>
+	    <select id="findProductAlls" parameterType="com.votes.schema.Product" resultMap="BaseResultMapp,recordCounts">
+        select SQL_CALC_FOUND_ROWS * from product where status = 1 limit 1,1;select FOUND_ROWS() as recordCounts;
+    </select>
+
+
+    <insert id="saveReception" parameterMap="Candidates" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        candidates(name,info)
+        values
+        (#{name},#{info})
+    </insert>
+
+
+	<resultMap id="VoteResultMap" type="com.votes.schema.Votes">
+        <result column="id" property="id" />
+        <result column="candidates_id" property="candidatesId" />
+        <result column="code" property="code" />
+        <result column="money" property="money" />
+        <result column="name" property="name" />
+    </resultMap>
+    
+    <resultMap id="VoteResultMapl" type="com.votes.schema.Votes">
+        <result column="id" property="id" />
+        <result column="money" property="money" />
+        <result column="name" property="name" />
+    </resultMap>
+    
+    <select id="findVoteDetail" resultType="HashMap" >
+        select id,name,money from votes where product_id = #{productId} and candidates_id=#{candidateId} order by money desc
+    </select>
+    
+    <insert id="AddVotes" useGeneratedKeys="true">
+        insert into votes(money,code,name,candidates_id,product_id) values(#{money},#{code},#{name},#{candidatesId},#{productId})
+    </insert>
+    
+	    
+	<select id="findObjByProperty" resultType="HashMap" >
+        SELECT SUM(bid) bid FROM rd_qh_buy_borrow
+        <where>
+        	<if test="isBig!=null">is_big = #{isBig}</if>
+        	<if test="symbol!=null">and symbol = #{symbol}</if>        	
+        </where>
+    </select>
+</mapper>
