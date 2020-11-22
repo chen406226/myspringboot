@@ -20,7 +20,7 @@
     <commons-beanutils.version>1.9.3</commons-beanutils.version>
     <jsoup.version>1.11.3</jsoup.version>
     <htmlunit-core.version>2.23</htmlunit-core.version>
-    <htmlunit.version>2.27</htmlunit.version>
+    <htmlunit.version>2.37.0</htmlunit.version>
     <springside.version>5.0.0-RC1</springside.version>
     <poi-ooxml.version>3.16</poi-ooxml.version>
     <fastjson.version>1.2.35</fastjson.version>
