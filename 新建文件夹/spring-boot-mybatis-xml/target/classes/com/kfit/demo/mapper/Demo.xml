@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kfit.demo.mapper.DemoMapper">
+	<!-- 编写insert语句 -->
+	<!-- 要返回真正id需要property如果键不一致可以家column -->
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+		insert into demo(name) values(#{name})
+	</insert>
+	
+	<!-- 修改 -->
+	<update id="update">
+		update demo set name =#{name} where id=#{id}
+	</update>
+	<!-- 删除 -->
+	<delete id="delete">
+		delete from demo where id=#{id}
+	</delete>
+	<resultMap type="com.kfit.demo.bean.Demo" id="baseRM">
+		<id property="id" column="id"></id>
+		<result property="name" column="name"/>
+	</resultMap>
+	<select resultMap="baseRM" id="selectAll">
+		select * from demo
+	</select>
+	<select resultMap="baseRM" id="selectById">
+		select * from demo where id=#{id}
+	</select>
+	
+	
+	<select resultMap="baseRM" id="select1">
+		select * from demo where
+			<if test="name!=null and name != '' ">
+				name=#{name}
+			</if>
+			<if test="email!=null and email != '' ">
+				name=#{email}
+			</if>
+	</select>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>
